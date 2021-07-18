@@ -1,4 +1,4 @@
-document.write( '<marquee>This test is sponsored by:- Online Guru</marquee>\n' );
+document.write( '<marquee>Private Portal of Pharmatricks</marquee>\n' );
 document.write( '<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n' );
 document.write( '<style>\n' );
 document.write( '.marginauto {\n' );
