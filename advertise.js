@@ -7,5 +7,5 @@ document.write( '    display: block;\n' );
 document.write( '}\n' );
 document.write( '</style>\n' );
 document.write( '<a href=\"https://www.pharmatricks.in\">\n' );
-document.write( '<br><img src=\"https://1.bp.blogspot.com/-ykG8vwomyko/YPSXG6QodfI/AAAAAAAAIGg/ZryKaj2rhQULHlmDOzYGlSVrmJ1-rGdnACNcBGAsYHQ/s1080/IMG_20210615_190240.jpg\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
+document.write( '<br><img src=\"https://1.bp.blogspot.com/-k0fFcW7pJfg/YPcUSAwiaaI/AAAAAAAAIHI/ALum0TRgRBYosHMkQC973wVREFPkrIbogCNcBGAsYHQ/s320/20210720_2040201.gif\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
 S
