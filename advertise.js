@@ -1,4 +1,4 @@
-document.write( '<marquee>Private Portal of Pharmatricks</marquee>\n' );
+document.write( '<marquee>Buy K.D. Tripathi book from Flipkart</marquee>\n' );
 document.write( '<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n' );
 document.write( '<style>\n' );
 document.write( '.marginauto {\n' );
