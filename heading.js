@@ -96,7 +96,7 @@ document.write( '  <a href=\"javascript:void(0)\" class=\"closebtn\" onclick=\"c
 document.write( '  <a href=\"index.html">Home</a>\n' );
 document.write( '  <a href="https://app.pharmatricks.in/test-list.html">Test List</a>\n' );
 document.write( '  <a href=\"#\">Semester</a>\n' );
-document.write( '  <a href="https://app.pharmatricks.in/G/index.html">GPAT</a>\n' );
+document.write( '  <a href="/G">GPAT</a>\n' );
 document.write( '  <a href=\"#\">NIPER</a>\n' );
 document.write( '  <a href=\"#\">Drug Inspecter</a>\n' );
 document.write( '  <a href=\"#\">M.pharm</a>\n' );
