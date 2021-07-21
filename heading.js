@@ -93,7 +93,7 @@ document.write( '\n' );
 document.write( '<div id=\"mySidenav\" class=\"sidenav\">\n' );
 document.write( '   <center> <img src=\"https://1.bp.blogspot.com/-__QMfyzgCnM/YPFP382v49I/AAAAAAAAIFA/E6pN36VUczIumlrvjVn6smVBEe-0Oa2WwCNcBGAsYHQ/s1080/IMG_20210615_190240.jpg\" width=\"150\"height=\"80\"></center>\n' );
 document.write( '  <a href=\"javascript:void(0)\" class=\"closebtn\" onclick=\"closeNav()\">&times;</a>\n' );
-document.write( '  <a href=\"https://app.pharmatricks.in/index.html">Home</a>\n' );
+document.write( '  <a href="https://app.pharmatricks.in">Home</a>\n' );
 document.write( '  <a href="https://app.pharmatricks.in/test-list.html">Test List</a>\n' );
 document.write( '  <a href=\"#\">Semester</a>\n' );
 document.write( '  <a href="/G">GPAT</a>\n' );
