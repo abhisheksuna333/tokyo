@@ -1,0 +1,745 @@
+<title> Biotransformation MCQ </title>
+
+
+ <script src="https://app.pharmatricks.in/heading.js"></script>
+
+
+<script src="https://app.pharmatricks.in/advertise.js"></script>
+
+
+<h3><font color="red"><u>Biotransformation ( 60 MCQ ) </u></h3></font>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body{
+ margin:0px;
+    background-image: url(img.jpg);
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+}
+{
+ box-sizing: border-box;
+}
+.custom-box{
+ max-width: 800px;
+ background-image: url();
+ margin:30px auto;
+ padding: 50px 40px;
+ border-radius: 10px;
+}
+.quiz-home-box{
+ text-align:center;
+ display: none;
+}
+.quiz-home-box.show{
+    display: block;
+    animation: fadeInRight 1s ease;
+}
+.quiz-home-box h4{
+ font-size: 30px;
+    font-weight: 500;
+    color:#fff;
+    margin: 0 0 30px;
+}
+.btn {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.btn:focus{
+    outline:none;
+}
+.quiz-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #ebd8b7;
+    display: none;
+}
+.quiz-box.show{
+    display: block;
+    animation: fadeInRight 1s ease;
+}
+.quiz-box .stats{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ font-size: 30px;
+ text-transform: none;
+ color: #1d1b19;
+}
+.quiz-box .stats .quiz-time{
+flex-basis: calc(50% - 20px);
+max-width: calc(50% - 20px);
+ 
+ text-align: left;
+}
+.quiz-box .stats .time-up-text{
+   
+    color:#d23723;
+ font-weight: 500;
+ display: none;
+}
+.quiz-box .stats .time-up-text.show{
+   display:inline-block;
+   animation: fadeInOut 1s linear infinite; 
+}
+@keyframes fadeInOut{
+ 0%{
+  opacity: 0;
+ }
+ 50%{
+  opacity: 1;
+ }
+ 100%{
+  opacity: 0;
+ }
+}
+.quiz-box .stats .quiz-time .remaining-time{
+ height: 60px;
+ width: 60px;
+ color:#059e4c;
+ border: 2px solid #059e4c;
+ background-color: #fff;
+ font-weight: 800;
+ line-height: 56px;
+ text-align: center;
+ border-radius: 50%;
+ display:inline-block;
+}
+.quiz-box .stats .quiz-time .remaining-time.less-time{
+    color:#d23723;
+ border-color:#d23723;
+}
+.quiz-box .stats .score-board{
+flex-basis: calc(50% - 20px);
+max-width: calc(50% - 20px);
+text-align: right;
+ 
+}
+.quiz-box .stats .score-board .correct-answer{
+ font-weight: 800;
+}
+.quiz-box .question-box{
+    background-color: #ffffff;
+    padding: 40px 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 28px;
+    border: 2px solid #000000;
+    text-align: center;
+    position: relative;
+}
+.quiz-box .question-box .current-question-num{
+ height: 50px;
+ width: 80px;
+ background-color: #fff;
+ border:2px solid #000;
+ font-size: 20px;
+ font-weight: 800;
+ color:#000;
+ border-radius: 9%;
+ line-height: 50px;
+ text-align: center;
+ position: absolute;
+ top:-95px;
+ left:50%;
+ margin-left: -35px;
+ z-index:1;
+}
+.quiz-box .question-box .question-text{
+    font-size: 22px;
+    font-family: 'Concert One', cursiv;
+    color:#000000;
+}
+.quiz-box .option-box{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ 
+}
+.quiz-box .option-box .option{
+ background-color: #ffffff;
+ flex-basis: calc(50% - 20px);
+ max-width: calc(50% - 20px);
+ margin-top: 30px;
+ padding: 7px 7px;
+ text-align: center;
+ font-size: 20px;
+ text-transform: none;
+ font-weight: 500;
+ color:#000000;
+ border:2px solid #000000;
+ border-radius: 9px;
+ cursor: pointer;
+    position: relative;
+    animation: zoomIn .3s linear forwards;
+    opacity: 0;
+}
+@keyframes zoomIn{
+ 0%{
+  transform: scale(0.8);
+ }
+ 100%{
+  transform: scale(1);
+  opacity:1;
+ }
+}
+.quiz-box .option-box .option.already-answered{
+ pointer-events: none;
+}
+.quiz-box .option-box .option.show-correct{
+    background-color: #11c466;
+ border-color:#059e4c;
+    color: #ffffff;
+    transition: all .3s ease;
+}
+.quiz-box .option-box .option.correct{
+ background-color: #11c466;
+ border-color:#059e4c;
+ color:#ffffff;
+    opacity:1;
+ animation: pulse 1s linear;
+}
+@keyframes pulse{
+ 0%{
+  transform: scale(1);
+ }
+ 50%{
+  transform: scale(1.1);
+ }
+ 100%{
+  transform: scale(1);
+ }
+}
+.quiz-box .option-box .option.correct::before{
+ content: '';
+ position: absolute;
+ height: 30px;
+ width: 30px;
+ right: 15px;
+ top:7px;
+ background-image: url("");
+ background-size: 20px;
+ background-position: center;
+ background-repeat: no-repeat;
+ animation: fadeInRight .5s ease;
+}
+.quiz-box .option-box .option.wrong{
+ background-color: #f85943;
+ border-color:#d23723;
+ color: #ffffff;
+ opacity:1;
+ animation: shake 1s linear;
+}
+.quiz-box .option-box .option.wrong::before{
+ content: '';
+ position: absolute;
+ height: 30px;
+ width: 30px;
+ right: 15px;
+ top:7px;
+ background-image: url("");
+ background-size: 20px;
+ background-position: center;
+ background-repeat: no-repeat;
+ animation: fadeInRight .5s ease;
+}
+@keyframes shake{
+ 0%,30%,50%{
+  transform: translateX(10px);
+ }
+ 20%,40%{
+  transform: translateX(-10px);
+ }
+ 60%{
+  transform: translateX(-7px);
+ }
+ 70%{
+  transform: translateX(7px);
+ }
+ 80%{
+  transform: translateX(-4px);
+ }
+ 90%{
+  transform: translateX(4px);
+ }
+ 100%{
+  transform: translateX(0px);
+ }
+ @keyframes fadeInRight{
+  0%{
+   opacity:0;
+   transform: translateX(40px);
+  }
+  100%{
+   opacity: 1;
+   transform: translateX(0px);
+  }
+ }
+}
+.quiz-box .answer-description{
+    background-color: #ffffff;
+    border:2px solid #c2af91;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius:10px;
+    color; #555555;
+    display: none;
+    
+}
+.quiz-box .answer-description.show{
+    display: block;
+    animation: fadeInRight 1s ease;
+}
+.quiz-box .next-question{
+ margin-top: 20px;
+ text-align: center;
+}
+.see-result-btn,.next-question-btn{
+    display: none;
+}
+.see-result-btn.show,
+.next-question-btn.show{
+    display: inline-block;
+    animation: fadeInRight 1s ease;
+}
+.quiz-over-box{
+    text-align: center;
+    display: none;
+}
+.quiz-over-box.show{
+   display: block;
+   animation: fadeInRight 1s ease;
+}
+.quiz-over-box h1{
+ font-size:50px;
+ font-family: 'Concert One', cursive;
+ color: #f70b0b;
+ margin:0px 3 20px; 
+}
+.quiz-over-box h4{
+ font-size:25px;
+ font-weight: normal;
+ color: #0910f7;
+ margin: 15px 0 20px;
+}
+.quiz-over-box h4 span{
+ font-weight: 800;
+ color:#000;
+}
+.start-again-quiz-btn,
+.go-home-btn{
+ margin-top: 15px;
+ 
+}
+@media (max-width: 767px){
+.custom-box{
+background-color: #fff;
+}
+.quiz-home-box h4{
+    font-size: 20px;
+}
+.btn{
+    padding: 10px 20px;
+ font-size: 15px;
+}
+ .quiz-box .question-box{
+        padding: 40px 0px;
+    }
+    .quiz-box .question-box .question-text{
+        font-size: 17px;
+        font-family: sans-serif;
+        color: #1d1b19;
+    }
+    .custom-box{
+        padding: 30px 10px 50px 10px;
+        background-color: #fff;
+    }
+    .quiz-box .stat{
+        font-size:20px;
+    }
+    .quiz-box .stats .quiz-time {
+        flex-basis: calc(60% - 10px);
+        max-width: calc(60% - 10px);
+        font-size: 18px;
+    }
+    .quiz-box .stats .score-board{
+        flex-basis: calc(40% - 10px);
+        max-width: calc(40% - 10px);
+        font-size: 16px;
+    }
+    .quiz-box .stats .quiz-time .remaining-time{
+        height: 50px;
+        width: 50px;
+        line-height: 46px;
+        color: #045e2e;
+        border: 2px solid #045e2e;
+    }
+    .quiz-box .question-box .current-question-num{
+        height: 28px;
+        width: 80px;
+        line-height: 30px;
+        top: -31px;
+        margin-left: -30px;
+        font-size: 16px;
+    }
+    .quiz-box .option-box .option{
+        flex-basis: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+ .quiz-over-box h1{
+        font-size: 30px;
+        
+        
+    }
+    .quiz-over-box h4{
+        font-size: 20px;
+        margin: 10px 0 15px;
+    }
+}</style>
+        <style>
+.button1 {
+	box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}</style> 
+
+</head>
+<body>  
+ <div class="quiz-home-box custom-box show">
+
+ <button type="button" class="start-quiz-btn btn">CLICK HERE TO START THE TEST<br>60 question</button><br><br><center>
+ Brought to You By <a href="https://t.me/gpatbooks">GPAT books </a>& <a href="https://www.instagram.com/pharmatricks">Pharmatricks</a></center>
+</div>
+<div class="quiz-box custom-box">
+<div class="stats">
+<div class="quiz-time">
+<div class="remaining-time"></div>
+    <span class="time-up-text">Time's Up</span>
+</div>
+<div class="score-board">
+<span class="score-text">You're score:</span>
+<span class="correct-answer">0</span>
+</div>
+</div>
+<div class="question-box">
+<div class="current-question-num">
+</div>
+<div class="question-text">
+    
+</div>
+</div>
+<div class="option-box">
+</div>
+<div class="answer-description">
+  
+</div>
+<div class="next-question">
+<button type="button" class="next-question-btn btn">Next question</button>
+
+<button type="button" class="see-result-btn btn">See Your Result</button>
+</div>
+<center>
+</center>
+<br><center><h4><a href="https://www.instagram.com/pharmatricks"> Pharmatricks.in</a></h4></center>
+
+</h6></center></div>
+<div class="quiz-over-box custom-box">
+<h1>Your Result</h1>
+<h4>Total Questions: <span class="total-questions"></span></h4>
+<h4>Attempt: <span class="total-attempt"></span></h4>
+<h4>Correct: <span class="total-correct"></span></h4>
+<h4>Wrong: <span class="total-wrong"></span></h4>
+<h4>Percentage: <span class="percentage"></span></h4>
+<hr>
+<button type="button" class="start-again-quiz-btn btn">Start Again</button>
+<button type="button" class="go-home-btn btn">Go To Home</button>
+</div>
+<script>
+const questionText=document.querySelector(".question-text");
+const optionBox=document.querySelector(".option-box");
+const currentQuestionNum=document.querySelector(".current-question-num");
+const answerDescription=document.querySelector(".answer-description");
+const nextQuestionBtn=document.querySelector(".next-question-btn");
+const correctAnswers=document.querySelector(".correct-answer");
+const seeResultBtn=document.querySelector(".see-result-btn");
+const remainingTime=document.querySelector(".remaining-time");
+const timeUpText=document.querySelector(".time-up-text");
+const quizHomeBox=document.querySelector(".quiz-home-box");
+const quizBox=document.querySelector(".quiz-box");
+const quizOverBox=document.querySelector(".quiz-over-box");
+const startAgainQuizBtn=document.querySelector(".start-again-quiz-btn");
+const goHomeBtn=document.querySelector(".go-home-btn");
+const startQuizBtn=document.querySelector(".start-quiz-btn");
+let attempt=0;
+let questionIndex=0;
+let score=0;
+let number=0;
+let myArray=[];
+let interval;
+</script>
+
+<script> let time=600;myApp=[
+{  question:'What is of the following is true for  biotransformation ?',     options:['Chemical alteration of drug','Conversion of non-polar lipid soluble to polar lipid insoluble','natural process to protect the body from ingested toxins','All of the above'],     answer:3 },{     question:'Which of the following is an example of Xenobiotics ?',     options:['Drugs','Processed food','Cosmetic products','All of the above'],     answer:3 },{     question:'Dietary plant toxins are called',     options:['Phytoallexins','Toxicoplantins','Plantogenin','Phytotoxins'],     answer:0 },{     question:'Which drug do NOT undergo biotransformation',     options:['Streptomycin','Pantoprazole','Neostigmine','Both A and C'],     answer:3 },{     question:'The primary site for biotransformation is',     options:['Kidney','Instestine','Lungs','Liver'],     answer:3 },{     question:'Which of the following is an advantage of biotransformation ?',     options:['Termination of drug action','Reduced Lipophilicity','Renal Excretion','All of the above'],     answer:3 },{     question:'Metabolic changes by enzymes takes by means of ?',     options:['Microsomal level','Cytoplasmic level','Mitochondrial level','All of the above'],     answer:3 },{     question:'Hofmann elimination is a ____________ process',     options:['Spontaneous molecular rearrangement','Non-spontaneous excretion ','Spontaneous degradation','All of the above'],     answer:0 },{     question:'Which of the following drugs excreted unchanged ?',     options:['Aminoglycoside','Methotrexate','Neostigmine','All of the above'],     answer:3 },{     question:'Aminoglycoside is an example of',     options:['Non polar drug','Highly polar drug','Both','None'],     answer:1 },{     question:'Which of the following phenomenon of biotransformation takes place in case of drugs like Morphine, Chloramphenicol, Propranolol, Paracetamol, Ibuprofen, lignocaine etc.',     options:['Active drug to active metabolite','Drug inactivation','Inactive drug to active drug','Prodrug'],     answer:1 },{     question:'The active metabolite of Imipramine is ?',     options:['Phenantrine','Dobutamine','Desipramine','methyl Imipramine'],     answer:2 },{     question:'Phenobarbitone is the active metabolite of',     options:['Pentobarbitol','Barbitolate','Flumazenil','Primidone'],     answer:3 },{     question:'The active metabolite of Procainamide is ?',     options:['N methyl Procainamide','N acetyl Procainamide','N propyl Procainamide','N butyll Procainamide'],     answer:1 },{     question:'The active metabolite of Cefotaxime ?',     options:['Methyl Cefotaxime','Acetyl Cefotaxime','Des acetyl Cefotaxime','All of the above'],     answer:2 },{     question:'Canrenone is the active metabolite of ?',     options:['Inamrenone','Ketone','Spirinolactone','Phenobarbitone'],     answer:2 },{     question:'Active drug to active metabolite which is INCORRECT ?',     options:['Codeine - Morphine','Digitoxin - Digitoxogenin','Diazepam - Desmethyl diazepam','Phenyl butazone - Oxyphenbutazone'],     answer:1 },{     question:'Which of the following is Not an example of prodrug ?',     options:['Dipivefrine','Bacampicillin','Acylovir','Morphine'],     answer:3 },{     question:'Find the WRONG match for the following prodrugs ?',     options:['Acylovir - Acylovir Triphosphate','Mercaptopurine - Methyl Mercaptopurine','Sulfasalazine - 5 amino salicylic acid','Proguanil - Proguanil diazine'],     answer:3 },{     question:'Which of the following group  is NOT an example of prodrug ?',     options:['Levodopa, Enalapril, alpha methyl dopa, Dipivefrine','Proguanil, Prednisone, Bacampicillin, Sulfasalazine','Cefotaxime, Amitriptyline, Primidone,, Diazepem','Cyclophosphamide, Mercaptopurine, prontosil, acylovir'],     answer:2 },{     question:'Another name for Phase-I reaction for biotransformation is ?',     options:['Non synthetic','Synthetic','Functionalization','Both A & C'],     answer:3 },{     question:'The metabolite of phase II reaction is generally INACTIVE, but in case of phase I the metabolite is _________',     options:['active','inactive','both are possible ','tertiary metabolite is formed'],     answer:2 },{     question:'Which of the following is CORRECT about Phase - I reaction of biotransformation ?',     options:['Endogenous radical get conjugated','Functional group is generated','It only form Inactive metabolite','All of the above'],     answer:1 },{     question:'Which of the following is NOT an example of Phase-I reaction ?',     options:['Decyclization','Cyclization','Hydrolysis','Methylation'],     answer:3 },{     question:'Which of the following is NOT true regarding Oxidation ?',     options:['Negatively charged radical is added','Postively Charged radical is removed','Oxygen is added','Postively Charged radical is added'],     answer:3 },{     question:'Which type of unstable intermediates are formed in oxidation ?',     options:['Epoxides','Superoxides','Quinones','All of the above'],     answer:3 },{     question:'Oxidation of which atom takes place in case of drugs like Meperidine, Dapsone and Chlorpheniramine',     options:['Nitrogen','Sulphur','Hydoxide','Chlorine'],     answer:0 },{     question:'In Oxidation, Aliphatic hydroxylation of Salicylic acid gives',     options:['Trialkyl salicylate','Hydroxy propyl salicylic acid','Gentisic acid','Acetylic acid'],     answer:2 },{     question:'Ibuprofen, Tolbutamide, Chlorpropamide undergoes  which type of oxidation mechanism for biotransformation ?',     options:['Aromatic hydroxylation','Aliphatic hydroxylation','Dealkylation','Desulfuration'],     answer:1 },{     question:'Which of the following drug does NOT undergo Aromatic hydroxylation ?',     options:['Phenytoin','Phenacetin','Propanolol','Phenobarbitone'],     answer:1 },{     question:'In biotransformation of , Phenacetin to Paracetamol which chemical mechanism is involved ?',     options:['Dealkylation at oxygen atom','Dealkylation at nitrogen atom','Dealkylation at sulphur atom','Oxidative deamination'],     answer:0 },{     question:'Biotransformation of 6 Methyl Thiopurine to Mercaptopurine involves which mechanism b?',     options:['Oxidative Deamination','Desulfuration','Dealkylation at sulphur atom','Dealkylation at Mitogen atom'],     answer:2 },{     question:'Which category of oxygenase enzyme help in biotransformation in liver ?',     options:['Microsomal Monooxygenase','Microsomal Dioxygenase','Microsomal Trioxygenase','All of the above'],     answer:0 },{     question:'Which of the following is a non-microsomal drug metabolising enzyme ?',     options:['CYP450','UDPGT','Flavoprotein oxidase','NADPH'],     answer:2 },{     question:'Which among the following help in biotransformation using non-microsomal oxidation ?',     options:['Mitochondrial enzymes','Cytoplasmic enzymes','Plasma oxidative enzymes','All of the above'],     answer:3 },{     question:'Oxidative Deamination of Adrenaline, 5HT and Tyramine is done by ?',     options:['MAO','Dehydogenases','Xanthine oxidase','Histaminase'],     answer:0 },{     question:'Alcohol gets oxidized to acetaldehyde and acetic acid with the help of which enzyme?',     options:['Dehydrogenases','Histaminase','MAO','Xanthine oxidase'],     answer:0 },{     question:'Which of the following is NOT a correct match for Microsomal Oxidation ?',     options:['Mitochondrial enzyme - MAO','Cytoplasmic enzymes - Dehydrogenases','Ribosomal enzyme - Xanthine oxidase','Plasma oxidative enzyme - Histaminase'],     answer:2 },{     question:'Which type of reduction takes place in drugs for biotransformation ?',     options:['Nitro reduction','KETO reduction','Azo reduction','All of the above'],     answer:3 },{     question:'The conversion of Cortisone to Hydrocortisone is an example of ',     options:['Nitro reduction','KETO reduction','Azo reduction','All of the above'],     answer:1 },{     question:'Which of the following is an Example of Nitro reduction ?',     options:['Cortisone to Hydrocortisone','Chloramphenicol to aryl amine metabolite','Prontosil to Sulfanilamide','Chloral hydrate to Trichloro ethanol'],     answer:1 },{     question:'Biotransformation of Pethidine to meperidinic acid is an example of ',     options:['Microsomal hydolysis','Non microsomal hydrolysis','Microsomal Reduction','Non microsomal Reduction'],     answer:0 },{     question:'Enzymes involved in Non microsomal hydrolysis is ?',     options:['Esterases','Amidases','Peptidases','All of the above'],     answer:3 },{     question:'Biotransformation for Proguanil follows which mechanism ?',     options:['Hydrolysis','Oxidation','Cyclization','Decyclization'],     answer:2 },{     question:'Which of the following drug follows decyclization for biotransformation ?',     options:['Chloramphenicol & Cortisone','Pethidine & Atropine','Amphetamine & Parathion','Phenytoin & Barbiturates'],     answer:3 },{     question:'Which of the following is an example of Engeneous substrate ?',     options:['Glucoronic acid','Amino acids','Sulfates and Acetates','All of the above'],     answer:3 },{     question:'Which of the following is TRUE for phase-II reaction ?',     options:['Metabolite from phase - I combines witu Endogenous substance','Covalent bond formation takes place between functional group of drug and endogenous substrate','True detoxification reaction take place in Phase -II','All of the above'],     answer:3 },{     question:'Does phase - II conjugation needs energy ?',     options:['YES','NO','not everytime','sometimes'],     answer:0 },{     question:'Which enzyme is involved in Glucuronic acid conjugation ?',     options:['UDP glucuronyl transferase','UDP glucuronyl acetate','UDP glucuronyl phosphate','UDP glucuronyl hydrate'],     answer:0 },{     question:'Which of the following drug does NOT get  biotransformed using glucoronic acid conjugation ?',     options:['Aspirin','Procainamide','PABA','Metronidazole'],     answer:1 },{     question:'The drugs which contains hydroxyl or carboxyl group gets metabolised by',     options:['Glucuronic acid conjugation','Acetylation','Sulfonation','Glutathione'],     answer:0 },{     question:'Which of the following is NOT true regarding phase-II conjugation based on the group present in drug moiety ?',     options:['Acetylation - Hydrazine or Amino group containing drug','Sulfate conjugation - Amino or Hydroxyl group containing drug','Glutathione - Epoxide or Quinone group containing drug','Methylation - Hydroxy or Carboxylic group containing drugs'],     answer:3 },{     question:'Which of the following drug does NOT undergo ACETYLATION reaction ?',     options:['Sulfonamide','Hydralazine','Dapsone','Warfarin'],     answer:3 },{     question:'Drug groups having Carboxylic acid gets metabolised by?',     options:['Glutathione conjugation','Glycine conjugation','Ribonucleoside synthesis','Acetylation'],     answer:1 },{     question:'Glutathione S Transferase is an example of',     options:['Nuclear enzyme','Cytoplasmic enzyme','Ribosomal enzyme','Lysosomal enzyme'],     answer:1 },{     question:'Toxic metabolite of Paracetamol and Ethacrynic act gets deactivated by ?',     options:['Glycine conjugation','Glutathione conjugation','Sulfate conjugation','Glucoronic acid conjugation'],     answer:1 },{     question:'Which of the following is NOT an example of Microsomal enzyme INHIBITOR ?',     options:['Valproate','Carbamazepine','Cimetidine','Ciprofloxacin'],     answer:1 },{     question:'Which of the following drug are Microsomal enzyme inhibitors ?',     options:['Valproate and Ketoconazole','Cimetidine and Ciprofloxacin','Erythromycin and Isoniazid','All of the above'],     answer:3 },{     question:'Which of the following is an example of Microsomal enzyme Inducer ?',     options:['Griseofulvin & Phenytoin','Primidone and Rifampin','Carbamazepine and Phenobarbitone','All of the above'],     answer:3 },{     question:'Alcoholics are more prone to hepatotoxicity of Paracetamol due to',     options:['Increase in Production of NABQ1','Decrease in Production of NABQ1','Increase in Production of NABQ3','Decrease in production of NABQ3'],     answer:0 },
+] </script>
+
+<script>
+function load(){
+    number++;
+   questionText.innerHTML=myApp[questionIndex].question;
+    creatOptions();
+    scoreBoard();
+    currentQuestionNum.innerHTML=number + " / " +myApp.length ;
+}
+function creatOptions(){
+    optionBox.innerHTML="";
+    let animationDelay=0.2;
+    for(let i=0; i<myApp[questionIndex].options.length; i++){
+        const option=document.createElement("div");
+              option.innerHTML=myApp[questionIndex].options[i];
+              option.classList.add("option");
+              option.id=i;
+              option.style.animationDelay=animationDelay + "s";
+              animationDelay=animationDelay+0.2;
+              option.setAttribute("onclick","check(this)");
+              optionBox.appendChild(option);
+        
+    }
+}
+function generateRandomQuestion(){
+    const randomNumber=Math.floor(Math.random() * myApp.length);
+   let hitDuplicate=0;
+   if(myArray.length == 0){
+        questionIndex=randomNumber;
+    }
+    else{
+        for(let i=0; i<myArray.length; i++){
+            if(randomNumber == myArray[i]){
+                //if duplicate found
+                hitDuplicate=1;
+                
+            }
+        }
+        if(hitDuplicate == 1){
+            generateRandomQuestion();
+            return;
+        }
+        else{
+            questionIndex=randomNumber;
+        }
+    }
+    
+    myArray.push(randomNumber);
+    console.log(myArray)
+    load();
+}
+function check(ele){
+    const id=ele.id;
+    if(id==myApp[questionIndex].answer){
+       ele.classList.add("correct");
+        score++;
+        scoreBoard();
+    }
+    else{
+        ele.classList.add("wrong");
+        //show correct option when clicked answer is wrong
+        for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+            }
+        }
+    }
+    attempt++;
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+    stopTimer();
+    
+    if(number == myApp.length){
+        quizOver();
+    }
+}
+function timeIsUp(){
+    showTimeUpText();
+    //when time is up Show Correct Answer
+    for(let i=0; i<optionBox.children.length; i++){
+            if(optionBox.children[i].id==myApp[questionIndex].answer){
+                optionBox.children[i].classList.add("show-correct");
+				
+            }
+        }
+    disableOptions()
+    showAnswerDescription();
+    showNextQuestionBtn();
+	if(number == myApp.length){
+        quizOver();
+      }
+}
+function startTimer(){
+  let timeLimit=time;
+    remainingTime.innerHTML=timeLimit;
+    remainingTime.classList.remove("less-time");
+    interval=setInterval(()=>{
+      timeLimit--;
+        if(timeLimit < 10){
+            timeLimit="0"+timeLimit;
+            
+            }
+            if(timeLimit < 6){
+                remainingTime.classList.add("less-time");  
+            }
+            remainingTime.innerHTML=timeLimit;
+            if(timeLimit == 0){
+            clearInterval(interval);
+            timeIsUp();
+    }
+    },1000)
+}
+function stopTimer(){
+    clearInterval(interval);
+}
+function disableOptions(){
+    for(let i=0; i<optionBox.children.length; i++){
+        optionBox.children[i].classList.add("already-answered")
+    }
+}
+function showAnswerDescription(){
+    if(typeof myApp[questionIndex].description !== 'undefined'){
+        answerDescription.classList.add("show");
+        answerDescription.innerHTML=myApp[questionIndex].description;
+    }
+    
+}
+function hideAnswerDescription(){
+    answerDescription.classList.remove("show");
+    answerDescription.innerHTML="";
+}
+function showNextQuestionBtn(){
+    nextQuestionBtn.classList.add("show");
+}
+function hideNextQuestionBtn(){
+    nextQuestionBtn.classList.remove("show");
+}
+function showTimeUpText(){
+    timeUpText.classList.add("show");
+}
+function hideTimeUpText(){
+    timeUpText.classList.remove("show");
+    
+}
+function scoreBoard(){
+    correctAnswers.innerHTML=score;
+}
+nextQuestionBtn.addEventListener("click",nextQuestion);
+function nextQuestion(){
+   generateRandomQuestion();
+    hideNextQuestionBtn();
+    hideAnswerDescription();
+    hideTimeUpText();
+    startTimer();
+}
+function quizResult(){
+    document.querySelector(".total-questions").innerHTML=myApp.length;
+    document.querySelector(".total-attempt").innerHTML=attempt;
+    document.querySelector(".total-correct").innerHTML=score;
+    document.querySelector(".total-wrong").innerHTML=attempt-score;
+    const percentage=(score/myApp.length)*100;
+    document.querySelector(".percentage").innerHTML=percentage.toFixed(2) +"%";
+}
+function resetQuiz(){
+  attempt=0;
+  //questionIndex=0;
+  score=0;
+  number=0;
+  myArray=[];
+}
+function quizOver(){
+    nextQuestionBtn.classList.remove("show");
+    seeResultBtn.classList.add("show");
+}
+seeResultBtn.addEventListener("click", ()=>{
+    quizBox.classList.remove("show");
+    seeResultBtn.classList.remove("show");
+    quizOverBox.classList.add("show");
+    quizResult();
+     })
+startAgainQuizBtn.addEventListener("click", ()=>{
+    quizBox.classList.add("show");
+    quizOverBox.classList.remove("show");
+    resetQuiz(); 
+    nextQuestion();
+    })
+goHomeBtn.addEventListener("click", ()=>{
+    quizOverBox.classList.remove("show");
+    quizHomeBox.classList.add("show")
+    resetQuiz();
+})
+  
+startQuizBtn.addEventListener("click", ()=>{
+    quizHomeBox.classList.remove("show");
+    quizBox.classList.add("show");
+    nextQuestion();
+})
+window.onload=()=>{const section = document.getElementById('qna');
+const fragment = document.createDocumentFragment();
+myApp.forEach(question => {
+  const paragraph = document.createElement('p');
+  
+  paragraph.innerText = `Q. ${question.question} - ${question.options[question.answer]}`;
+  
+  fragment.appendChild(paragraph);
+});
+section.appendChild(fragment);
+}
+    
+//}
+</script>
+</body>
+<br><br><br><br><br>
+
+
+<script src="https://app.pharmatricks.in/footer.js"></script>
