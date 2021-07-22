@@ -7,4 +7,4 @@ document.write( '    display: block;\n' );
 document.write( '}\n' );
 document.write( '</style>\n' );
 document.write( '<a href=\"https://amzn.to/2UBU9ax\">\n' );
-document.write( '<br><img src=\"https://1.bp.blogspot.com/-GE9DngV2OMM/YPm9iKe8vRI/AAAAAAAAIIM/FqITPfDL7TovmMp73bb1WRSW9eytoTLEgCNcBGAsYHQ/s320/20210722_2301551.gif\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
+document.write( '<br><img src=\"https://1.bp.blogspot.com/-GlvVZ7eHxHc/YPnO1veWr4I/AAAAAAAAIIU/E4C5fB-gvcEMMA3jTIt3DjPBtBam9faeQCNcBGAsYHQ/s320/ezgif-4-e7950cc1a230%2B%25281%2529.gif\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
