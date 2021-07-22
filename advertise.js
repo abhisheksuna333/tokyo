@@ -7,5 +7,5 @@ document.write( '    display: block;\n' );
 document.write( '}\n' );
 document.write( '</style>\n' );
 document.write( '<a href=\"https://amzn.to/2UBU9ax\">\n' );
-document.write( '<br><img src=\"https://im4.ezgif.com/tmp/ezgif-4-e7950cc1a230.gif\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
+document.write( '<br><img src=\"https://1.bp.blogspot.com/-GE9DngV2OMM/YPm9iKe8vRI/AAAAAAAAIIM/FqITPfDL7TovmMp73bb1WRSW9eytoTLEgCNcBGAsYHQ/s320/20210722_2301551.gif\" class=\"marginauto\" width=\"400\"height=\"170\"></a>\n' );
 
